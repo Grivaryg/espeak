@@ -9,8 +9,11 @@
   <b>Content:</b>
   <%= @speak.content %>
 </p>
-<%= jw_player("/Music/#{@speak.title}.mp3",
+<%#= jw_player("/Music/#{@speak.title}.mp3",
   :width => 200, :height => 110) %>
+  
+<a href="http://10.230.146.254:3000/Music/<%= @speak.title %>.mp3"><%= @speak.title %></a>
+
 
 <%= link_to 'Edit', edit_speak_path(@speak) %> |
 <%= link_to 'Back', speaks_path %>
